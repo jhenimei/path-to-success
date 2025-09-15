@@ -6,50 +6,78 @@
     font-family: "Kavoon";
     src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 }
-/* CSS REST? */
+
+/* CSS RESET */
 /* ROOT VARIABLES */
 /* GLOBAL STYLES (mobile first/small) */
 
-h1, h2 {
-    font-family: "Kavoon", sans-serif;
-    color: #ffffff;
-}
+@media (max-width: 450px) {
+    body {
+        margin: 0;
+    }
 
-h3, h4, p, li, a, table, small {
-    font-family: 'Inter', sans-serif;
-}
+    h1 {
+        margin-bottom: 0;
+        font-size: 3em;
+    }
 
-h1 {
-    font-size: 3em;
-}
+    h1, h2 {
+        font-family: "Kavoon", sans-serif;
+        color: #ffffff;
+    }
 
-nav h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-style: italic;
-    color: #1E1E1E;
-}
+    h3, h4, p, li, a, table, small {
+        font-family: 'Inter', sans-serif;
+    }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    h1 + p {
+        padding-bottom: 1.5em;
+    }
 
-    text-align: center;
-}
+    /* nav styling */
+    nav {
+        background-color: #E9BB57;
+        padding: 1em;
+    }
 
-nav li {
-    text-transform: uppercase;
-    font-weight: bold;
+    nav h2 {
+        margin: 0;
 
-    background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5em;
+        font-style: italic;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-align: center;
+        color: #1E1E1E;
+    }
 
-    margin: 0.50em;
-}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
 
-nav a {
-    text-decoration: none;
+        text-align: center;
+    }
+
+    nav li {
+        text-transform: uppercase;
+        font-weight: bold;
+
+        background-color: #ffffff;
+
+        margin: 0.50em;
+        padding: 10px 0;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    /* our services section */
+    main section {
+        margin: 0 1em;
+    }
 }
 
 h2 {
@@ -81,6 +109,35 @@ nav {
 
 .services {
     background-color: white;
+}
+
+.pink-sections ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    font-weight: bold;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.pink-sections ul li {
+    background-color: #4CA7C0;
+}
+
+.pink-sections ul li + li {
+    background-color: #6B8FE7;
+}
+
+.pink-sections ul li + li + li {
+    background-color: #E9BB57;
+}
+
+.pink-sections ul li:last-of-type {
+    background-color: #ffffff;
 }
 
 table, th, td {
