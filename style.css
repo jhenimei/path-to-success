@@ -2,177 +2,275 @@
 /* IMPORTED FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 
-@font-face {
-    font-family: "Kavoon";
-    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
-}
-
 /* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* ROOT VARIABLES */
+:root {
+    /* site theme colors */
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
+
+    /* text customizations */
+    --custom-header-font: "Kavoon", sans-serif;
+    --custom-text-font: 'Inter', sans-serif;
+    --h1-size: 3em;
+    --h2-size: 2em;
+    --h3-size: 1.5em;
+    --h4-size: 1.15em;
+}
+
 /* GLOBAL STYLES (mobile first/small) */
-
-@media (max-width: 450px) {
-    body {
-        margin: 0;
-    }
-
-    h1 {
-        margin-bottom: 0;
-        font-size: 3em;
-    }
-
-    h1, h2 {
-        font-family: "Kavoon", sans-serif;
-        color: #ffffff;
-    }
-
-    h3, h4, p, li, a, table, small {
-        font-family: 'Inter', sans-serif;
-    }
-
-    h1 + p {
-        padding-bottom: 1.5em;
-    }
-
-    /* nav styling */
-    nav {
-        background-color: #E9BB57;
-        padding: 1em;
-    }
-
-    nav h2 {
-        margin: 0;
-
-        font-family: 'Inter', sans-serif;
-        font-size: 1.5em;
-        font-style: italic;
-        font-weight: bolder;
-        text-transform: uppercase;
-        text-align: center;
-        color: #1E1E1E;
-    }
-
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        text-align: center;
-    }
-
-    nav li {
-        text-transform: uppercase;
-        font-weight: bold;
-
-        background-color: #ffffff;
-
-        margin: 0.50em;
-        padding: 10px 0;
-    }
-
-    nav a {
-        text-decoration: none;
-    }
-
-    /* our services section */
-    main section {
-        margin: 0 1em;
-    }
-}
-
-h2 {
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.5em;
-    color: #E9BB57;
-}
-
-h4 {
-    font-size: 1.15em;
-    color: #484FB7;
+html {
+    background-color: var(--lavender);
 }
 
 body {
-    background-color: #484FB7;
+    max-width: 450px;
+    margin: 0 auto;
+
+    background-color: var(--purple);
+
+    color: var(--dark-gray);
+    font-family: var(--custom-text-font);
 }
 
-header {
-    text-align: center;
-    color: #ffffff;
+h1, h2 {
+    font-family: var(--custom-header-font);
 }
 
-nav {
-    background-color: #E9BB57;
-}
-
-.services {
-    background-color: white;
-}
-
-.pink-sections ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    text-align: center;
+h3, h4 {
     font-weight: bold;
+}
 
+/* header section */
+header {
+    padding: 1.5em 1em;
+    text-align: center;
+    color: var(--white);
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+/* nav */
+nav {
+    padding: 1em 0.5em;
+
+    background-color: var(--yellow);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+
+nav h2 {
+    font: var(--custom-text-font);
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+nav li {
+    margin: 0.5em;
+    padding: 1em;
+
+    background-color: var(--white);
+
+}
+nav a {
+    text-decoration: none;
+}
+
+/* main */
+main h2 {
+    font-size: var(--h2-size);
+    color: var(--white);
+}
+
+main h3 {
+    padding-top: 0.5em;
+    font-size: var(--h3-size);
+    color: var(--yellow);
+}
+
+/* main services seciton */
+main > section{
+    padding: 1.5em 1.75em;
+}
+
+section.services {
+    margin: 1.5em 0;
+    padding: 1.75em;
+    background-color: var(--white);
+    border-radius: 1em;
+}
+
+h4 {
+    padding: 0.5em 0;
+    font-size: var(--h4-size);
+    color: var(--purple);
+}
+
+p {
+    line-height: 1.5em;
+}
+
+/* main pink sections */
+section.pink-sections {
+    background-color: var(--pink);
+}
+
+/* main why choose us section */
+section.pink-sections > ul {
+    margin-top: 0.75em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
 }
 
-.pink-sections ul li {
-    background-color: #4CA7C0;
+section.pink-sections > ul > li {
+    padding: 1.5em 1em;
+
+    border-radius: 0.5em;
+
+    text-align: center;
+    font-weight: bold;
 }
 
-.pink-sections ul li + li {
-    background-color: #6B8FE7;
+section.pink-sections > ul > li:first-child {
+    background-color: var(--teal);
 }
 
-.pink-sections ul li + li + li {
-    background-color: #E9BB57;
+section.pink-sections > ul > li:nth-child(2) {
+    background-color: var(--purple);
 }
 
-.pink-sections ul li:last-of-type {
-    background-color: #ffffff;
+section.pink-sections > ul > li:nth-child(3) {
+    background-color: var(--yellow);
 }
 
+section.pink-sections > ul > li:last-child {
+    background-color: var(--white);
+}
+
+/* main pricing section */
+table {
+    margin: 0.5em auto;
+}
 table, th, td {
     border-collapse: collapse;
-    border: solid 1px #E9BB57;
+    border: solid 2px var(--yellow);
 }
 
 table th {
-    background-color: #E9BB57;
+    padding: 1em 2em;
+    background-color: var(--yellow);
+
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 table td {
-    background-color: #ffffff;
+    padding: 1em 1.5em;
+    background-color: var(--white);
 }
 
-.pink-sections {
-    background-color: #D9526F;
+/* main take first steps section */
+section.pink-sections > p {
+    padding: 0.5em 0;
+    color: white;
 }
 
-footer {
-    color: #ffffff;
+section.pink-sections > div {
+    width: 80%;
+    margin: 1em auto;
+    padding: 1.25em;
+
+    background-color: var(--white);
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px var(--dark-gray);
+
     text-align: center;
 }
 
-footer small a {
-    color: #ffffff;
+section.pink-sections > div > a {
+    color: var(--dark-gray);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-/*
-Teal :#4CA7C0
-Purple: #484FB7
-Lavender: #6B8FE7
-Yellow: #E9BB57; 
-Pink:#D9526F;
-Dark-gray:#1E1E1E; 
-White:#ffffff; 
-*/
+/* footer section */
+footer {
+    padding: 2em 1em;
+
+    text-align: center;
+}
+
+footer > small {
+    color: var(--white);
+}
+
+footer > small:first-child {
+    margin-right: 2em;
+}
+
+footer > small > a {
+    color: var(--white);
+}
